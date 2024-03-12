@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ProjectTwo</string>
+    <string name="reminder_hint">Enter a reminder.</string>
+    <string name="reminder_completed_label">Completed</string>
+    <string name="location_hint">Enter a location.</string>
+    <string name="reminders_details_label">Reminder Details</string>
+    <string name="notes_label">Enter reminder notes.</string>
 </resources>
