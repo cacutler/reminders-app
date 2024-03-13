@@ -34,11 +34,14 @@
         android:id="@+id/reminder_notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/notes_label"
+        android:hint="@string/notes_hint"
         android:importantForAutofill="no"
         android:inputType="text"/>
-    <CalendarView
+    <EditText
         android:id="@+id/reminder_due_date"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="@string/due_date_hint"
+        android:importantForAutofill="no"
+        android:inputType="date"/>
 </LinearLayout>

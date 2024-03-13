@@ -3,7 +3,7 @@ import java.util.UUID
 data class Reminder(
     val id: UUID,
     val title: String,
-    val dueDate: Long,
+    val dueDate: String,
     val location: String,
     val completed: Boolean,
     val notes: String

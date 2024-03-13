@@ -4,5 +4,6 @@
     <string name="reminder_completed_label">Completed</string>
     <string name="location_hint">Enter a location.</string>
     <string name="reminders_details_label">Reminder Details</string>
-    <string name="notes_label">Enter reminder notes.</string>
+    <string name="notes_hint">Enter reminder notes.</string>
+    <string name="due_date_hint">Enter a due date.</string>
 </resources>
