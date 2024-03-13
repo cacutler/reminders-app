@@ -1,9 +1,19 @@
 package com.example.projecttwo
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import java.util.UUID
 class ReminderListViewModel: ViewModel() {
     val reminders = mutableListOf<Reminder>()
     init {
+        viewModelScope.launch {
+            reminders += loadReminders()
+        }
+    }
+    suspend fun loadReminders(): List<Reminder> {
+        val result = mutableListOf<Reminder>()
+        delay(5000)
         for (i in 1 until 31) {
             val reminder = Reminder(
                 id = UUID.randomUUID(),
@@ -13,7 +23,8 @@ class ReminderListViewModel: ViewModel() {
                 notes = "Testing reminder #$i",
                 location = "Home"
             )
-            reminders += reminder
+            result += reminder
         }
+        return result
     }
 }

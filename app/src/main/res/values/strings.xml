@@ -6,4 +6,5 @@
     <string name="reminders_details_label">Reminder Details</string>
     <string name="notes_hint">Enter reminder notes.</string>
     <string name="due_date_hint">Enter a due date.</string>
+    <string name="checkbox_description">This checkbox represents if a reminder is completed.</string>
 </resources>
