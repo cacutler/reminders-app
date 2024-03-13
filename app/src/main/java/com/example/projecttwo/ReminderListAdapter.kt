@@ -5,7 +5,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projecttwo.databinding.ListItemReminderBinding
 class ReminderHolder(
-    val binding: ListItemReminderBinding
+    private val binding: ListItemReminderBinding
 ): RecyclerView.ViewHolder(binding.root) {
     fun bind(reminder: Reminder) {
         binding.reminderLocation.text = reminder.location
