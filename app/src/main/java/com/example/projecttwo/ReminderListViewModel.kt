@@ -1,30 +1,20 @@
 package com.example.projecttwo
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import java.util.UUID
 class ReminderListViewModel: ViewModel() {
-    val reminders = mutableListOf<Reminder>()
+    private val reminderRepository = ReminderRepository.get()
+    private val _reminders: MutableStateFlow<List<Reminder>> = MutableStateFlow(emptyList())
+    val reminders: StateFlow<List<Reminder>>
+        get() = _reminders.asStateFlow()
     init {
         viewModelScope.launch {
-            reminders += loadReminders()
+            reminderRepository.getReminders().collect {
+                _reminders.value = it
+            }
         }
-    }
-    suspend fun loadReminders(): List<Reminder> {
-        val result = mutableListOf<Reminder>()
-        delay(5000)
-        for (i in 1 until 31) {
-            val reminder = Reminder(
-                id = UUID.randomUUID(),
-                title = "Reminder #$i",
-                dueDate = "3/$i/2024",
-                completed = i % 2 == 0,
-                notes = "Testing reminder #$i",
-                location = "Home"
-            )
-            result += reminder
-        }
-        return result
     }
 }

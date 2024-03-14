@@ -6,19 +6,16 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projecttwo.databinding.ListItemReminderBinding
+import java.util.UUID
 class ReminderHolder(
     private val binding: ListItemReminderBinding
 ): RecyclerView.ViewHolder(binding.root) {
-    fun bind(reminder: Reminder) {
+    fun bind(reminder: Reminder, onReminderClicked: (reminderId: UUID) -> Unit) {
         binding.reminderLocation.text = reminder.location
         binding.reminderTitle.text = reminder.title
         binding.reminderDueDate.text = reminder.dueDate
         binding.root.setOnClickListener {
-            Toast.makeText(
-                binding.root.context,
-                "${reminder.title} clicked!",
-                Toast.LENGTH_SHORT
-            ).show()
+            onReminderClicked(reminder.id)
         }
         binding.reminderCompleted.visibility = if (reminder.completed) {
             View.VISIBLE
@@ -28,7 +25,8 @@ class ReminderHolder(
     }
 }
 class ReminderListAdapter(
-    private val reminders: List<Reminder>
+    private val reminders: List<Reminder>,
+    private val onReminderClicked: (reminderId: UUID) -> Unit
 ): RecyclerView.Adapter<ReminderHolder>() {
     override fun getItemCount() = reminders.size
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReminderHolder {
@@ -39,7 +37,7 @@ class ReminderListAdapter(
     override fun onBindViewHolder(holder: ReminderHolder, position: Int) {
         val reminder = reminders[position]
         holder.apply {
-            holder.bind(reminder)
+            holder.bind(reminder, onReminderClicked)
         }
     }
 }
