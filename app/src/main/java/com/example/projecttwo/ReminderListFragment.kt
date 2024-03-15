@@ -52,7 +52,6 @@ class ReminderListFragment: Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.fragment_reminder_list, menu)
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.new_reminder -> {
