@@ -1,5 +1,6 @@
 package database
 import androidx.room.Dao
+import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import com.example.projecttwo.Reminder
@@ -13,4 +14,6 @@ interface ReminderDao {
     suspend fun getReminder(id: UUID): Reminder
     @Update
     suspend fun updateReminder(reminder: Reminder)
+    @Insert
+    suspend fun addReminder(reminder: Reminder)
 }

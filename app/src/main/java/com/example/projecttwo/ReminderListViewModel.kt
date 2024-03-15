@@ -17,4 +17,7 @@ class ReminderListViewModel: ViewModel() {
             }
         }
     }
+    suspend fun addReminder(reminder: Reminder) {
+        reminderRepository.addReminder(reminder)
+    }
 }

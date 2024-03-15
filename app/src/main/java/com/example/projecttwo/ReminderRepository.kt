@@ -18,6 +18,9 @@ class ReminderRepository private constructor(context: Context, private val corou
             database.reminderDao().updateReminder(reminder)
         }
     }
+    suspend fun addReminder(reminder: Reminder) {
+        database.reminderDao().addReminder(reminder)
+    }
     companion object {
         private var INSTANCE: ReminderRepository? = null
         fun initialize(context: Context) {
