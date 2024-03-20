@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
-    android:background="@color/design_default_color_secondary_variant">
+    android:background="@color/design_default_color_secondary">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,8 +13,14 @@
         android:text="@string/reminders_details_label"
         android:height="48dp"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reminder Title"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
     <EditText
         android:id="@+id/reminder_title"
         android:layout_width="match_parent"
@@ -23,8 +29,13 @@
         android:importantForAutofill="no"
         android:inputType="text"
         android:textAlignment="center"
-        android:textColor="@color/white"
         android:layout_margin="16dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reminder Due Date"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
     <EditText
         android:id="@+id/reminder_due_date"
         android:layout_width="match_parent"
@@ -33,8 +44,13 @@
         android:importantForAutofill="no"
         android:inputType="date"
         android:textAlignment="center"
-        android:textColor="@color/white"
         android:layout_margin="16dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reminder Location"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
     <EditText
         android:id="@+id/reminder_location"
         android:layout_width="match_parent"
@@ -43,8 +59,13 @@
         android:importantForAutofill="no"
         android:inputType="text"
         android:textAlignment="center"
-        android:textColor="@color/white"
         android:layout_margin="16dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reminder Notes"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
     <EditText
         android:id="@+id/reminder_notes"
         android:layout_width="match_parent"
@@ -53,7 +74,6 @@
         android:importantForAutofill="no"
         android:inputType="text"
         android:textAlignment="center"
-        android:textColor="@color/white"
         android:layout_margin="16dp"/>
     <CheckBox
         android:id="@+id/reminder_completed"
@@ -61,6 +81,6 @@
         android:layout_height="wrap_content"
         android:text="@string/reminder_completed_label"
         android:layout_gravity="center"
-        android:textColor="@color/white"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:buttonTint="@color/black"/>
 </LinearLayout>
