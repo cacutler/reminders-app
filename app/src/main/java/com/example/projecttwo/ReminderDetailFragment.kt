@@ -11,7 +11,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
 import com.example.projecttwo.databinding.FragmentReminderDetailBinding
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 class ReminderDetailFragment: Fragment() {
     private var _binding: FragmentReminderDetailBinding? = null

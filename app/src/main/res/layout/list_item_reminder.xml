@@ -7,7 +7,6 @@
     android:layout_height="wrap_content"
     android:background="@color/design_default_color_secondary"
     android:minHeight="100dp">
-
     <TextView
         android:id="@+id/reminder_title"
         android:layout_width="0dp"
@@ -21,8 +20,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/reminder_completed"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/reminder_location"
         android:layout_width="0dp"
@@ -38,8 +36,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/reminder_due_date"
-        app:layout_constraintTop_toBottomOf="@+id/reminder_title" />
-
+        app:layout_constraintTop_toBottomOf="@+id/reminder_title"/>
     <TextView
         android:id="@+id/reminder_due_date"
         android:layout_width="0dp"
@@ -55,8 +52,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/reminder_location"
         app:layout_constraintStart_toEndOf="@+id/reminder_completed"
-        app:layout_constraintTop_toBottomOf="@+id/reminder_title" />
-
+        app:layout_constraintTop_toBottomOf="@+id/reminder_title"/>
     <ImageView
         android:id="@+id/reminder_completed"
         android:layout_width="wrap_content"
@@ -66,8 +62,7 @@
         android:src="@drawable/baseline_check_box_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -79,8 +74,7 @@
         app:layout_constraintBottom_toTopOf="@+id/reminder_due_date"
         app:layout_constraintEnd_toEndOf="@+id/reminder_due_date"
         app:layout_constraintStart_toStartOf="@+id/reminder_due_date"
-        app:layout_constraintTop_toBottomOf="@+id/reminder_title" />
-
+        app:layout_constraintTop_toBottomOf="@+id/reminder_title"/>
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -92,7 +86,7 @@
         app:layout_constraintBottom_toTopOf="@+id/reminder_location"
         app:layout_constraintEnd_toEndOf="@+id/reminder_location"
         app:layout_constraintStart_toStartOf="@+id/reminder_location"
-        app:layout_constraintTop_toBottomOf="@+id/reminder_title" />
+        app:layout_constraintTop_toBottomOf="@+id/reminder_title"/>
     <View
         android:id="@+id/divider"
         android:layout_width="409dp"
