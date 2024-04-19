@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="reminder_hint">Introduzca un título significativo y memorable para el recordatorio.</string>
+</resources>

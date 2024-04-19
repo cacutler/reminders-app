@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reminder Title"
+        android:text="@string/title"
         android:textAlignment="center"
         android:textColor="@color/black"/>
     <EditText
@@ -33,7 +33,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reminder Due Date"
+        android:text="@string/due_date"
         android:textAlignment="center"
         android:textColor="@color/black"/>
     <EditText
@@ -48,7 +48,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reminder Location"
+        android:text="@string/location"
         android:textAlignment="center"
         android:textColor="@color/black"/>
     <EditText
@@ -63,7 +63,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reminder Notes"
+        android:text="@string/notes"
         android:textAlignment="center"
         android:textColor="@color/black"/>
     <EditText
@@ -82,5 +82,6 @@
         android:text="@string/reminder_completed_label"
         android:layout_gravity="center"
         android:layout_margin="8dp"
-        android:buttonTint="@color/black"/>
+        android:buttonTint="@color/black"
+        android:contentDescription="@string/checkbox_description"/>
 </LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProyectoDos</string>
+    <string name="reminder_hint">Introduzca un recordatorio.</string>
+    <string name="reminder_completed_label">Completado</string>
+    <string name="location_hint">Introduzca una ubicación.</string>
+    <string name="reminders_details_label">Detalles del Recordatorio</string>
+    <string name="notes_hint">Introduzca notas de recordatorio.</string>
+    <string name="due_date_hint">Introduzca una fecha de vencimiento.</string>
+    <string name="checkbox_description">Esta casilla de verificación representa si se ha completado un recordatorio.</string>
+    <string name="new_reminder">Nuevo Recordatorio</string>
+    <string name="notes">Notas de Recordatorio</string>
+    <string name="location">Ubicación de recordatorio</string>
+    <string name="due_date">Recordatorio de fecha de vencimiento</string>
+    <string name="title">Título de Recordatorio</string>
+</resources>
