@@ -59,14 +59,7 @@ class ReminderListFragment: Fragment() {
     }
     private fun showNewReminder() {
         viewLifecycleOwner.lifecycleScope.launch {
-            val newReminder = Reminder(
-                id = UUID.randomUUID(),
-                title = "",
-                dueDate = "",
-                notes = "",
-                location = "",
-                completed = false
-            )
+            val newReminder = Reminder(id = UUID.randomUUID(), title = "", dueDate = "", notes = "", location = "", completed = false)
             reminderListViewModel.addReminder(newReminder)
             findNavController().navigate(ReminderListFragmentDirections.showReminderDetail(newReminder.id))
         }
