@@ -27,9 +27,7 @@ class ReminderDetailViewModel(reminderId: UUID): ViewModel() {
         reminder.value?.let { reminderRepository.updateReminder(it) }
     }
 }
-class ReminderDetailViewModelFactory(
-    private val reminderId: UUID
-): ViewModelProvider.Factory {
+class ReminderDetailViewModelFactory(private val reminderId: UUID): ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return ReminderDetailViewModel(reminderId) as T
     }

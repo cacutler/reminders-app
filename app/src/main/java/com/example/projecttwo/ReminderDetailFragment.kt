@@ -22,11 +22,7 @@ class ReminderDetailFragment: Fragment() {
         get() = checkNotNull(_binding) {
             "Cannon access binding because it is null.  Is the view visible?"
         }
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentReminderDetailBinding.inflate(inflater, container, false)
         return  binding.root
     }

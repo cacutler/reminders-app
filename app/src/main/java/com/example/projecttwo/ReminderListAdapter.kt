@@ -5,9 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projecttwo.databinding.ListItemReminderBinding
 import java.util.UUID
-class ReminderHolder(
-    private val binding: ListItemReminderBinding
-): RecyclerView.ViewHolder(binding.root) {
+class ReminderHolder(private val binding: ListItemReminderBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(reminder: Reminder, onReminderClicked: (reminderId: UUID) -> Unit) {
         binding.reminderLocation.text = reminder.location
         binding.reminderTitle.text = reminder.title
@@ -22,10 +20,7 @@ class ReminderHolder(
         }
     }
 }
-class ReminderListAdapter(
-    private val reminders: List<Reminder>,
-    private val onReminderClicked: (reminderId: UUID) -> Unit
-): RecyclerView.Adapter<ReminderHolder>() {
+class ReminderListAdapter(private val reminders: List<Reminder>, private val onReminderClicked: (reminderId: UUID) -> Unit): RecyclerView.Adapter<ReminderHolder>() {
     override fun getItemCount() = reminders.size
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReminderHolder {
         val inflater = LayoutInflater.from(parent.context)
