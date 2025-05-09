@@ -25,11 +25,7 @@ class ReminderListFragment: Fragment() {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
     }
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentReminderListBinding.inflate(inflater, container, false)
         binding.reminderRecyclerView.layoutManager = LinearLayoutManager(context)
         return binding.root
