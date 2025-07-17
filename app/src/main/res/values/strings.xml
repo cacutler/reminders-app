@@ -12,4 +12,7 @@
     <string name="location">Reminder Location</string>
     <string name="due_date">Reminder Due Date</string>
     <string name="title">Reminder Title</string>
+    <string name="reminder_title">Reminder Title</string>
+    <string name="reminder_location">Reminder Location</string>
+    <string name="reminder_due_date">Reminder Due Date</string>
 </resources>
