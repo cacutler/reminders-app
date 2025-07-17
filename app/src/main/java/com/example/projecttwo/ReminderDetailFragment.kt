@@ -18,10 +18,9 @@ class ReminderDetailFragment: Fragment() {
     private val reminderDetailViewModel: ReminderDetailViewModel by viewModels {
         ReminderDetailViewModelFactory(args.reminderId)
     }
-    private val binding
-        get() = checkNotNull(_binding) {
-            "Cannon access binding because it is null.  Is the view visible?"
-        }
+    private val binding get() = checkNotNull(_binding) {
+        "Cannon access binding because it is null.  Is the view visible?"
+    }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentReminderDetailBinding.inflate(inflater, container, false)
         return  binding.root
@@ -29,36 +28,36 @@ class ReminderDetailFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding?.apply {
-            reminderTitle.doOnTextChanged { text, _, _, _ ->
-                reminderDetailViewModel.updateReminder { oldReminder ->
+            reminderTitle.doOnTextChanged {text, _, _, _ ->
+                reminderDetailViewModel.updateReminder {oldReminder ->
                     oldReminder.copy(title = text.toString())
                 }
             }
-            reminderLocation.doOnTextChanged { text, _, _, _ ->
-                reminderDetailViewModel.updateReminder { oldReminder ->
+            reminderLocation.doOnTextChanged {text, _, _, _ ->
+                reminderDetailViewModel.updateReminder {oldReminder ->
                     oldReminder.copy(location = text.toString())
                 }
             }
-            reminderNotes.doOnTextChanged { text, _, _, _ ->
-                reminderDetailViewModel.updateReminder { oldReminder ->
+            reminderNotes.doOnTextChanged {text, _, _, _ ->
+                reminderDetailViewModel.updateReminder {oldReminder ->
                     oldReminder.copy(notes = text.toString())
                 }
             }
-            reminderDueDate.doOnTextChanged { text, _, _, _ ->
-                reminderDetailViewModel.updateReminder { oldReminder ->
+            reminderDueDate.doOnTextChanged {text, _, _, _ ->
+                reminderDetailViewModel.updateReminder {oldReminder ->
                     oldReminder.copy(dueDate = text.toString())
                 }
             }
-            reminderCompleted.setOnCheckedChangeListener { _, isChecked ->
-                reminderDetailViewModel.updateReminder { oldReminder ->
+            reminderCompleted.setOnCheckedChangeListener {_, isChecked ->
+                reminderDetailViewModel.updateReminder {oldReminder ->
                     oldReminder.copy(completed = isChecked)
                 }
             }
         }
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                reminderDetailViewModel.reminder.collect { reminder ->
-                    reminder?.let { updateUi(it) }
+                reminderDetailViewModel.reminder.collect {reminder ->
+                    reminder?.let {updateUi(it)}
                 }
             }
         }

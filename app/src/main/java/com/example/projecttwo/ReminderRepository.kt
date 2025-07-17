@@ -29,8 +29,7 @@ class ReminderRepository private constructor(context: Context, private val corou
             }
         }
         fun get(): ReminderRepository {
-            return INSTANCE ?:
-            throw IllegalStateException("ReminderRepository must be initialized")
+            return INSTANCE ?: throw IllegalStateException("ReminderRepository must be initialized")
         }
     }
 }

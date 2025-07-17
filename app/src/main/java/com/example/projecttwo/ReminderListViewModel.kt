@@ -8,8 +8,7 @@ import kotlinx.coroutines.launch
 class ReminderListViewModel: ViewModel() {
     private val reminderRepository = ReminderRepository.get()
     private val _reminders: MutableStateFlow<List<Reminder>> = MutableStateFlow(emptyList())
-    val reminders: StateFlow<List<Reminder>>
-        get() = _reminders.asStateFlow()
+    val reminders: StateFlow<List<Reminder>> get() = _reminders.asStateFlow()
     init {
         viewModelScope.launch {
             reminderRepository.getReminders().collect {

@@ -16,10 +16,9 @@ import kotlinx.coroutines.launch
 import java.util.UUID
 class ReminderListFragment: Fragment() {
     private var _binding: FragmentReminderListBinding? = null
-    private val binding
-        get() = checkNotNull(_binding) {
-            "Cannot access binding because it is null.  Is the view visible?"
-        }
+    private val binding get() = checkNotNull(_binding) {
+        "Cannot access binding because it is null.  Is the view visible?"
+    }
     private val reminderListViewModel: ReminderListViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +36,8 @@ class ReminderListFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewLifecycleOwner.lifecycleScope.launch {
-            reminderListViewModel.reminders.collect { reminders ->
-                binding.reminderRecyclerView.adapter = ReminderListAdapter(reminders) { reminderId ->
+            reminderListViewModel.reminders.collect {reminders ->
+                binding.reminderRecyclerView.adapter = ReminderListAdapter(reminders) {reminderId ->
                     findNavController().navigate(ReminderListFragmentDirections.showReminderDetail(reminderId))
                 }
             }

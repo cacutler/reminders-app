@@ -18,13 +18,13 @@ class ReminderDetailViewModel(reminderId: UUID): ViewModel() {
         }
     }
     fun updateReminder(onUpdate: (Reminder) -> Reminder) {
-        _reminder.update { oldReminder ->
-            oldReminder?.let { onUpdate(it) }
+        _reminder.update {oldReminder ->
+            oldReminder?.let {onUpdate(it)}
         }
     }
     override fun onCleared() {
         super.onCleared()
-        reminder.value?.let { reminderRepository.updateReminder(it) }
+        reminder.value?.let {reminderRepository.updateReminder(it)}
     }
 }
 class ReminderDetailViewModelFactory(private val reminderId: UUID): ViewModelProvider.Factory {
