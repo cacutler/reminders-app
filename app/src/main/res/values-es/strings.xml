@@ -13,4 +13,7 @@
     <string name="location">Ubicación de recordatorio</string>
     <string name="due_date">Recordatorio de fecha de vencimiento</string>
     <string name="title">Título de Recordatorio</string>
+    <string name="reminder_title">Título del recordatorio</string>
+    <string name="reminder_location">Ubicación del recordatorio</string>
+    <string name="reminder_due_date">Recordatorio Fecha de vencimiento</string>
 </resources>
