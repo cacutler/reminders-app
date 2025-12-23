@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ProyectoDos</string>
+    <string name="app_name">Recordatorios</string>
     <string name="reminder_hint">Introduzca un recordatorio.</string>
     <string name="reminder_completed_label">Completado</string>
     <string name="location_hint">Introduzca una ubicación.</string>
