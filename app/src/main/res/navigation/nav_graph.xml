@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph" app:startDestination="@id/reminderListFragment">
-    <fragment android:id="@+id/reminderListFragment" android:name="com.example.projecttwo.ReminderListFragment" android:label="ReminderListFragment" tools:layout="@layout/fragment_reminder_list">
+    <fragment android:id="@+id/reminderListFragment" android:name="com.cacutler.reminders.ReminderListFragment" android:label="ReminderListFragment" tools:layout="@layout/fragment_reminder_list">
         <action android:id="@+id/show_reminder_detail" app:destination="@id/reminderDetailFragment"/>
     </fragment>
-    <fragment android:id="@+id/reminderDetailFragment" android:name="com.example.projecttwo.ReminderDetailFragment" android:label="ReminderDetailFragment" tools:layout="@layout/fragment_reminder_detail">
+    <fragment android:id="@+id/reminderDetailFragment" android:name="com.cacutler.reminders.ReminderDetailFragment" android:label="ReminderDetailFragment" tools:layout="@layout/fragment_reminder_detail">
         <argument android:name="reminderId" app:argType="java.util.UUID"/>
     </fragment>
 </navigation>

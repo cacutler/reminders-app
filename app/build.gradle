@@ -5,10 +5,10 @@ plugins {
     id 'androidx.navigation.safeargs'
 }
 android {
-    namespace 'com.example.projecttwo'
+    namespace 'com.cacutler.reminders'
     compileSdk 36
     defaultConfig {
-        applicationId "com.example.projecttwo"
+        applicationId "com.cacutler.reminders"
         minSdk 24
         targetSdk 36
         versionCode 1
